@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | ATS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+
+<nav>
+    <span>ATS Dashboard</span>
+    <div>
+        <a href="{% url 'dashboard' %}">Home</a>
+        <a href="{% url 'shortlist' %}">Shortlisted</a>
+        <a href="{% url 'hold' %}">Hold</a>
+        <a href="{% url 'reject' %}">Rejected</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</nav>
+
+<div class="dashboard-container">
+    <h1 class="dashboard-title">Candidate Overview</h1>
+
+    <div class="cards">
+        <div class="card green">
+            Shortlisted
+            <span>{{ shortlisted }}</span>
+        </div>
+
+        <div class="card orange">
+            On Hold
+            <span>{{ hold }}</span>
+        </div>
+
+        <div class="card red">
+            Rejected
+            <span>{{ rejected }}</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

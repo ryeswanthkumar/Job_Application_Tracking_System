@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortlisted Candidates</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+
+<nav>
+    <span>Shortlisted</span>
+    <a href="{% url 'dashboard' %}">Dashboard</a>
+</nav>
+
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Experience</th>
+            <th>Score</th>
+            <th>Status</th>
+        </tr>
+
+        {% for c in candidates %}
+        <tr>
+            <td>{{ c.first_name }} {{ c.last_name }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.experience }}</td>
+            <td>{{ c.score }}</td>
+            <td>Shortlisted</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

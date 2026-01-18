@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Candidate Overview</h1>
+
+<div class="cards">
+    <div class="card shortlisted">
+        <h2>Shortlisted</h2>
+        <div class="count">{{ shortlisted_count }}</div>
+        <a href="{% url 'shortlisted' %}" class="view">View</a>
+    </div>
+
+    <div class="card hold">
+        <h2>On Hold</h2>
+        <div class="count">{{ hold_count }}</div>
+        <a href="{% url 'hold' %}" class="view">View</a>
+    </div>
+
+    <div class="card rejected">
+        <h2>Rejected</h2>
+        <div class="count">{{ rejected_count }}</div>
+        <a href="{% url 'rejected' %}" class="view">View</a>
+    </div>
+</div>
+{% endblock %}

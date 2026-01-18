@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}ATS System{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h3>ATS Resume System</h3>
+    <div>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'shortlisted' %}">Shortlisted</a>
+        <a href="{% url 'hold' %}">Hold</a>
+        <a href="{% url 'rejected' %}">Rejected</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
