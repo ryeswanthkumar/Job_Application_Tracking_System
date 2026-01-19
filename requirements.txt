@@ -1,0 +1,5 @@
+Django==5.2.5
+gunicorn
+mysqlclient
+python-decouple
+whitenoise
