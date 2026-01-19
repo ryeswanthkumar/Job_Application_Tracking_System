@@ -20,9 +20,14 @@ SECRET_KEY = config(
     default='django-insecure-temp-key-change-this'
 )
 
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "jobapplicationtrackingsystem-production.up.railway.app",
+    "localhost",
+    "127.0.0.1"
+]
+
 
 # --------------------------------------------------
 # APPLICATIONS
@@ -120,6 +125,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'applications' / 'static']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+WHITENOISE_USE_FINDERS = True
 
 # --------------------------------------------------
 # DEFAULT PK
