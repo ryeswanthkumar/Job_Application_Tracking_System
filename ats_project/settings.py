@@ -20,7 +20,7 @@ SECRET_KEY = config(
     default='django-insecure-temp-key-change-this'
 )
 
-DEBUG = False
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://jobapplicationtrackingsystem-production.up.railway.app"
