@@ -22,6 +22,11 @@ SECRET_KEY = config(
 
 DEBUG = False
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://jobapplicationtrackingsystem-production.up.railway.app"
+]
+
+
 ALLOWED_HOSTS = [
     "jobapplicationtrackingsystem-production.up.railway.app",
     "localhost",
